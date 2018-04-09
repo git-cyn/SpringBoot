@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example;
 
 import ddd.TestService;
 import org.junit.Test;
@@ -7,14 +7,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+/**
+ * Created by admin on 2018/4/10.
+ */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = DemoApplication.class)
-public class DemoApplicationTests {
+@SpringBootTest
+public class TestServiceTest {
 
-	@Autowired
-	TestService testService;
-	@Test
-	public void contextLoads() {
-	}
+
+    @Autowired
+    TestService testService;
+    @Test
+    public void get() throws Exception {
+        System.out.println(testService.get());
+    }
 
 }
